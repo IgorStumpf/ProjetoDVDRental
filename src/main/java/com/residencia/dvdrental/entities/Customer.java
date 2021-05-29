@@ -1,5 +1,6 @@
 package com.residencia.dvdrental.entities;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -22,32 +23,112 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "customerId")
 	private Integer customerId;
-	
+
 	@Column(name = "storeId")
 	private Integer storeId;
-	
+
 	@Column(name = "firstName")
 	private String firstName;
-	
+
 	@Column(name = "lastName")
 	private String lastName;
-	
+
 	@Column(name = "email")
 	private String email;
-	
+
 	@Column(name = "addressId")
 	private Integer addressId;
-	
+
 	@Column(name = "activeBool")
 	private Boolean activeBool; // verificar tipo
-	
+
 	@Column(name = "createDate")
 	private Date createDate;
-	
+
 	@Column(name = "active")
 	private Integer active;
-	
+
 	@Column(name = "lastUpdate")
-	private String lastUpdate; // timestamp verificar tipo
-	
+	private Calendar lastUpdate; // Modificado para Calendar (timestamp - descobrir qual o tipo)
+
+	public Integer getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Integer customerId) {
+		this.customerId = customerId;
+	}
+
+	public Integer getStoreId() {
+		return storeId;
+	}
+
+	public void setStoreId(Integer storeId) {
+		this.storeId = storeId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Integer getAddressId() {
+		return addressId;
+	}
+
+	public void setAddressId(Integer addressId) {
+		this.addressId = addressId;
+	}
+
+	public Boolean getActiveBool() {
+		return activeBool;
+	}
+
+	public void setActiveBool(Boolean activeBool) {
+		this.activeBool = activeBool;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Integer getActive() {
+		return active;
+	}
+
+	public void setActive(Integer active) {
+		this.active = active;
+	}
+
+	public Calendar getLastUpdate() {
+		return lastUpdate;
+	}
+
+	public void setLastUpdate(Calendar lastUpdate) {
+		this.lastUpdate = lastUpdate;
+	}
+
 }
