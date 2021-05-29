@@ -1,5 +1,7 @@
 package com.residencia.dvdrental.entities;
 
+import java.util.Calendar;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,5 +30,38 @@ public class Actor {
 	private String lastName;
 
 	@Column(name = "lastUpdate")
-	private String lastUpdate; // timestamp - descobrir qual o tipo
+	private Calendar lastUpdate; // Modificado para Calendar (timestamp - descobrir qual o tipo)
+
+	public Integer getActorId() {
+		return actorId;
+	}
+
+	public void setActorId(Integer actorId) {
+		this.actorId = actorId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Calendar getLastUpdate() {
+		return lastUpdate;
+	}
+
+	public void setLastUpdate(Calendar lastUpdate) {
+		this.lastUpdate = lastUpdate;
+	}
+
 }
