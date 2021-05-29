@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -23,8 +25,9 @@ public class Inventory {
 	@Column(name = "inventoryId")
 	private Integer inventoryId;
 
-	@Column(name = "filmId")
-	private Integer filmId;
+	@ManyToOne
+	@JoinColumn(name = "filmId")
+	private Film filmId;
 
 	@Column(name = "storeId")
 	private Integer storeId;
@@ -40,11 +43,11 @@ public class Inventory {
 		this.inventoryId = inventoryId;
 	}
 
-	public Integer getFilmId() {
+	public Film getFilmId() {
 		return filmId;
 	}
 
-	public void setFilmId(Integer filmId) {
+	public void setFilmId(Film filmId) {
 		this.filmId = filmId;
 	}
 

@@ -10,36 +10,23 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-/**
- * 
- * @author Igor Stumpf
- * @date 2021-05-23
- */
 @Entity
 @Table(name = "category")
-public class Category {
+public class Film_Category {
 
-	@Id
+	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "categoryId")
+	@Column(name = "category_id")
 	private Integer categoryId;
+
+	@Column(name = "name")
+	private String categoryName;
+
+	@Column(name = "last_update")
+	private Calendar lastUpdate;
 
 	@OneToOne(mappedBy = "categoryId")
 	private Film_Category Film;
-
-	@Column(name = "name")
-	private String name;
-
-	@Column(name = "lastUpdate")
-	private Calendar lastUpdate; // Modificado para Calendar (timestamp - descobrir qual o tipo)
-
-	public Film_Category getFilm() {
-		return Film;
-	}
-
-	public void setFilm(Film_Category film) {
-		Film = film;
-	}
 
 	public Integer getCategoryId() {
 		return categoryId;
@@ -49,12 +36,12 @@ public class Category {
 		this.categoryId = categoryId;
 	}
 
-	public String getName() {
-		return name;
+	public String getCategoryName() {
+		return categoryName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 
 	public Calendar getLastUpdate() {
@@ -63,6 +50,14 @@ public class Category {
 
 	public void setLastUpdate(Calendar lastUpdate) {
 		this.lastUpdate = lastUpdate;
+	}
+
+	public Film_Category getFilm() {
+		return Film;
+	}
+
+	public void setFilm(Film_Category film) {
+		Film = film;
 	}
 
 }

@@ -1,12 +1,14 @@
 package com.residencia.dvdrental.entities;
 
 import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -22,6 +24,15 @@ public class Address {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "addressId")
 	private Integer addressId;
+
+	@OneToMany(mappedBy = "addressId") // Relacionamento com Customer
+	private List<Customer> customerList;
+
+	@OneToMany(mappedBy = "addressId") // Relacionamento com Staff
+	private List<Staff> staffList;
+
+	@OneToMany(mappedBy = "addressId") // Relacionamento com Store
+	private List<Store> storeList;
 
 	@Column(name = "address")
 	private String address;
@@ -43,6 +54,30 @@ public class Address {
 
 	@Column(name = "lastUpdate")
 	private Calendar lastUpdate; // Modificado para Calendar (timestamp - descobrir qual o tipo)
+
+	public List<Customer> getCustomerList() {
+		return customerList;
+	}
+
+	public void setCustomerList(List<Customer> customerList) {
+		this.customerList = customerList;
+	}
+
+	public List<Staff> getStaffList() {
+		return staffList;
+	}
+
+	public void setStaffList(List<Staff> staffList) {
+		this.staffList = staffList;
+	}
+
+	public List<Store> getStoreList() {
+		return storeList;
+	}
+
+	public void setStoreList(List<Store> storeList) {
+		this.storeList = storeList;
+	}
 
 	public Integer getAddressId() {
 		return addressId;

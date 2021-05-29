@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -23,14 +24,16 @@ public class Payment {
 	@Column(name = "paymentId")
 	private Integer paymentId;
 
-	@Column(name = "customerId")
-	private Integer customerId;
+	@ManyToOne
+	private Customer customerId;
 
+	@ManyToOne
 	@Column(name = "staffId")
-	private Integer staffId;
+	private Staff staffId;
 
+	@ManyToOne
 	@Column(name = "rentalId")
-	private Integer rentalId;
+	private Rental rentalId;
 
 	@Column(name = "amount")
 	private Integer amount;
@@ -46,27 +49,27 @@ public class Payment {
 		this.paymentId = paymentId;
 	}
 
-	public Integer getCustomerId() {
+	public Customer getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(Integer customerId) {
+	public void setCustomerId(Customer customerId) {
 		this.customerId = customerId;
 	}
 
-	public Integer getStaffId() {
+	public Staff getStaffId() {
 		return staffId;
 	}
 
-	public void setStaffId(Integer staffId) {
+	public void setStaffId(Staff staffId) {
 		this.staffId = staffId;
 	}
 
-	public Integer getRentalId() {
+	public Rental getRentalId() {
 		return rentalId;
 	}
 
-	public void setRentalId(Integer rentalId) {
+	public void setRentalId(Rental rentalId) {
 		this.rentalId = rentalId;
 	}
 

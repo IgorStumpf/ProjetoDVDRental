@@ -2,12 +2,17 @@ package com.residencia.dvdrental.entities;
 
 import java.awt.image.BufferedImage;
 import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -24,14 +29,24 @@ public class Staff {
 	@Column(name = "staffId")
 	private Integer staffId;
 
+	@ManyToOne
+	@JoinColumn(name = "addressId")
+	private Address addressId;
+
+	@OneToMany(mappedBy = "staffId")
+	private List<Rental> rentalList;
+
+	@OneToOne(mappedBy = "staffId")
+	private Store store;
+
+	@OneToMany(mappedBy = "staffId")
+	private List<Payment> paymentList;
+
 	@Column(name = "firstName")
 	private String firstName;
 
 	@Column(name = "lastName")
 	private String lastName;
-
-	@Column(name = "addressId")
-	private Integer addressId;
 
 	@Column(name = "email")
 	private String email;
@@ -63,6 +78,38 @@ public class Staff {
 		this.staffId = staffId;
 	}
 
+	public Address getAddressId() {
+		return addressId;
+	}
+
+	public void setAddressId(Address addressId) {
+		this.addressId = addressId;
+	}
+
+	public List<Rental> getRentalList() {
+		return rentalList;
+	}
+
+	public void setRentalList(List<Rental> rentalList) {
+		this.rentalList = rentalList;
+	}
+
+	public Store getStore() {
+		return store;
+	}
+
+	public void setStore(Store store) {
+		this.store = store;
+	}
+
+	public List<Payment> getPaymentList() {
+		return paymentList;
+	}
+
+	public void setPaymentList(List<Payment> paymentList) {
+		this.paymentList = paymentList;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -77,14 +124,6 @@ public class Staff {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public Integer getAddressId() {
-		return addressId;
-	}
-
-	public void setAddressId(Integer addressId) {
-		this.addressId = addressId;
 	}
 
 	public String getEmail() {

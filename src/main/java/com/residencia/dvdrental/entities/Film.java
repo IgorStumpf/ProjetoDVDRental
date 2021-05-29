@@ -1,12 +1,17 @@
 package com.residencia.dvdrental.entities;
 
 import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -23,6 +28,19 @@ public class Film {
 	@Column(name = "filmId")
 	private Integer filmId;
 
+	@ManyToOne
+	@JoinColumn(name = "languageId")
+	private Language languageId;
+
+	@OneToOne(mappedBy = "filmId")
+	private Film_Actor Actor;
+
+	@OneToOne(mappedBy = "filmId")
+	private Film_Category Category;
+
+	@OneToMany(mappedBy = "filmId")
+	private List<Inventory> inventorylist;
+
 	@Column(name = "title")
 	private String title;
 
@@ -31,9 +49,6 @@ public class Film {
 
 	@Column(name = "releaseYear")
 	private Integer releaseYear;
-
-	@Column(name = "languageId")
-	private Integer languageId;
 
 	@Column(name = "rentalDuration")
 	private Integer rentalDuration;
@@ -67,6 +82,38 @@ public class Film {
 		this.filmId = filmId;
 	}
 
+	public Language getLanguageId() {
+		return languageId;
+	}
+
+	public void setLanguageId(Language languageId) {
+		this.languageId = languageId;
+	}
+
+	public Film_Actor getActor() {
+		return Actor;
+	}
+
+	public void setActor(Film_Actor actor) {
+		Actor = actor;
+	}
+
+	public Film_Category getCategory() {
+		return Category;
+	}
+
+	public void setCategory(Film_Category category) {
+		Category = category;
+	}
+
+	public List<Inventory> getInventorylist() {
+		return inventorylist;
+	}
+
+	public void setInventorylist(List<Inventory> inventorylist) {
+		this.inventorylist = inventorylist;
+	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -89,14 +136,6 @@ public class Film {
 
 	public void setReleaseYear(Integer releaseYear) {
 		this.releaseYear = releaseYear;
-	}
-
-	public Integer getLanguageId() {
-		return languageId;
-	}
-
-	public void setLanguageId(Integer languageId) {
-		this.languageId = languageId;
 	}
 
 	public Integer getRentalDuration() {
