@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Customer;
 import com.residencia.dvdrental.repositories.CustomerRepository;
-import com.residencia.dvdrental.entities.Customer;
-import com.residencia.dvdrental.repositories.CustomerRepository;
 
 @Service
 public class CustomerService {

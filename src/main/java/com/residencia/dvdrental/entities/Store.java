@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -23,11 +26,16 @@ public class Store {
 	@Column(name = "storeId")
 	private Integer storeId;
 
+	@OneToOne
+	@JoinColumn(name = "managerStaffId")
+	private Staff staffId;
+
+	@ManyToOne
+	@JoinColumn(name = "addressId")
+	private Address addressId;
+
 	@Column(name = "managerStaffId")
 	private Integer managerStaffId;
-
-	@Column(name = "addressId")
-	private Integer addressId;
 
 	@Column(name = "lastUpdate")
 	private Calendar lastUpdate; // Modificado para Calendar (timestamp - descobrir qual o tipo)
@@ -40,20 +48,28 @@ public class Store {
 		this.storeId = storeId;
 	}
 
+	public Staff getStaffId() {
+		return staffId;
+	}
+
+	public void setStaffId(Staff staffId) {
+		this.staffId = staffId;
+	}
+
+	public Address getAddressId() {
+		return addressId;
+	}
+
+	public void setAddressId(Address addressId) {
+		this.addressId = addressId;
+	}
+
 	public Integer getManagerStaffId() {
 		return managerStaffId;
 	}
 
 	public void setManagerStaffId(Integer managerStaffId) {
 		this.managerStaffId = managerStaffId;
-	}
-
-	public Integer getAddressId() {
-		return addressId;
-	}
-
-	public void setAddressId(Integer addressId) {
-		this.addressId = addressId;
 	}
 
 	public Calendar getLastUpdate() {

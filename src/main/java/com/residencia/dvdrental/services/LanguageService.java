@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Language;
 import com.residencia.dvdrental.repositories.LanguageRepository;
-import com.residencia.dvdrental.entities.Language;
-import com.residencia.dvdrental.repositories.LanguageRepository;
 
 @Service
 public class LanguageService {

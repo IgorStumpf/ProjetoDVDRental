@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Rental;
 import com.residencia.dvdrental.repositories.RentalRepository;
-import com.residencia.dvdrental.entities.Rental;
-import com.residencia.dvdrental.repositories.RentalRepository;
 
 @Service
 public class RentalService {

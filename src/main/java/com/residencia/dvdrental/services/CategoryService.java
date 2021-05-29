@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Category;
 import com.residencia.dvdrental.repositories.CategoryRepository;
-import com.residencia.dvdrental.entities.Category;
-import com.residencia.dvdrental.repositories.CategoryRepository;
 
 @Service
 public class CategoryService {

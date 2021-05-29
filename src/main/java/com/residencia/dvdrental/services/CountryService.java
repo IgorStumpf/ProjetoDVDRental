@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Country;
 import com.residencia.dvdrental.repositories.CountryRepository;
-import com.residencia.dvdrental.entities.Country;
-import com.residencia.dvdrental.repositories.CountryRepository;
 
 @Service
 public class CountryService {

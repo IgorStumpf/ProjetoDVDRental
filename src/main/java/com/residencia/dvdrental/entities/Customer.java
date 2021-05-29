@@ -2,12 +2,17 @@ package com.residencia.dvdrental.entities;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -23,6 +28,16 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "customerId")
 	private Integer customerId;
+
+	@ManyToOne
+	@JoinColumn(name = "addressId")
+	private Address addressid;
+
+	@OneToOne(mappedBy = "customerId")
+	private Rental rental;
+
+	@OneToMany(mappedBy = "customerId")
+	private List<Payment> paymentList;
 
 	@Column(name = "storeId")
 	private Integer storeId;
@@ -50,6 +65,30 @@ public class Customer {
 
 	@Column(name = "lastUpdate")
 	private Calendar lastUpdate; // Modificado para Calendar (timestamp - descobrir qual o tipo)
+
+	public Address getAddressid() {
+		return addressid;
+	}
+
+	public void setAddressid(Address addressid) {
+		this.addressid = addressid;
+	}
+
+	public Rental getRental() {
+		return rental;
+	}
+
+	public void setRental(Rental rental) {
+		this.rental = rental;
+	}
+
+	public List<Payment> getPaymentList() {
+		return paymentList;
+	}
+
+	public void setPaymentList(List<Payment> paymentList) {
+		this.paymentList = paymentList;
+	}
 
 	public Integer getCustomerId() {
 		return customerId;
