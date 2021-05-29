@@ -27,7 +27,7 @@ public class Store {
 	private Integer storeId;
 
 	@OneToOne
-	@JoinColumn(name = "manager_staff_id")
+	@JoinColumn(name = "managerStaffId")
 	private Staff staffId;
 
 	@ManyToOne

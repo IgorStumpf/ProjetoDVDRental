@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Film;
 import com.residencia.dvdrental.repositories.FilmRepository;
-import com.residencia.dvdrental.entities.Film;
-import com.residencia.dvdrental.repositories.FilmRepository;
 
 @Service
 public class FilmService {

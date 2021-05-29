@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Address;
 import com.residencia.dvdrental.repositories.AddressRepository;
-import com.residencia.dvdrental.entities.Address;
-import com.residencia.dvdrental.repositories.AddressRepository;
 
 @Service
 public class AddressService {

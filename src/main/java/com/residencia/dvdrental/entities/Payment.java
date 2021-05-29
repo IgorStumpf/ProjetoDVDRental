@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -28,11 +29,11 @@ public class Payment {
 	private Customer customerId;
 
 	@ManyToOne
-	@Column(name = "staffId")
+	@JoinColumn(name = "staffId")
 	private Staff staffId;
 
 	@ManyToOne
-	@Column(name = "rentalId")
+	@JoinColumn(name = "rentalId")
 	private Rental rentalId;
 
 	@Column(name = "amount")

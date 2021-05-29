@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.Inventory;
 import com.residencia.dvdrental.repositories.InventoryRepository;
-import com.residencia.dvdrental.entities.Inventory;
-import com.residencia.dvdrental.repositories.InventoryRepository;
 
 @Service
 public class InventoryService {

@@ -15,15 +15,15 @@ public class Film_Actor {
 
 	@Id
 	@OneToOne
-	@Column(name = "actor_id")
+	@JoinColumn(name = "actorId")
 	private Actor actorId;
 
 	@Id
 	@OneToOne
-	@JoinColumn(name = "film_id")
+	@JoinColumn(name = "filmId")
 	private Film filmId;
 
-	@Column(name = "last_update")
+	@Column(name = "lastUpdate")
 	private Calendar lastUpdate;
 
 	public Actor getActorId() {

@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 import com.residencia.dvdrental.entities.City;
 import com.residencia.dvdrental.repositories.CityRepository;
-import com.residencia.dvdrental.entities.City;
-import com.residencia.dvdrental.repositories.CityRepository;
 
 @Service
 public class CityService {

@@ -11,18 +11,18 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "category")
+@Table(name = "film_category")
 public class Film_Category {
 
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "category_id")
+	@Column(name = "categoryId")
 	private Integer categoryId;
 
 	@Column(name = "name")
 	private String categoryName;
 
-	@Column(name = "last_update")
+	@Column(name = "lastUpdate")
 	private Calendar lastUpdate;
 
 	@OneToOne(mappedBy = "categoryId")

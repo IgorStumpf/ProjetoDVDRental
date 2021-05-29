@@ -25,13 +25,13 @@ public class Address {
 	@Column(name = "addressId")
 	private Integer addressId;
 
-	@OneToMany(mappedBy = "addressId") // Relacionamento com Customer
+	@OneToMany(mappedBy = "addressId") 
 	private List<Customer> customerList;
 
-	@OneToMany(mappedBy = "addressId") // Relacionamento com Staff
+	@OneToMany(mappedBy = "addressId") 
 	private List<Staff> staffList;
 
-	@OneToMany(mappedBy = "addressId") // Relacionamento com Store
+	@OneToMany(mappedBy = "addressId") 
 	private List<Store> storeList;
 
 	@Column(name = "address")
