@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="100px" src="./assets/DvDRentalLogotipo.png" alt="logo dvd Rental"/>
+  <img height="100px" src="./assets/dvdRentalLogotipo.png" alt="logo dvd Rental"/>
 </p>
 
 <!--
