@@ -9,9 +9,9 @@
 </br>
 
 ## Cronograma de Atividades
-✔️ Atividade I : Criação do Projeto API DVDRental (Entidades e Repositórios)*&emsp;&emsp;*(Entreda dia 29/05/2021)*</br>
-❌ Atividade II: Projeto API DVDRental (Serviços CRUD e Controllers)&emsp;&emsp;*(Entreda dia 01/06/2021)*</br>
-❌ Atividade III: Projeto API DVDRental (Mapeamento Entidade x VO)&emsp;&emsp;*(Entreda dia 04/06/2021)*</br>
+✔️ Atividade I : Criação do Projeto API DVDRental (Entidades e Repositórios)&emsp;&emsp;*(Entrega dia 29/05/2021)*</br>
+❌ Atividade II: Projeto API DVDRental (Serviços CRUD e Controllers)&emsp;&emsp;&emsp;&emsp;&emsp;    *(Entrega dia 01/06/2021)*</br>
+❌ Atividade III: Projeto API DVDRental (Mapeamento Entidade x VO)&emsp;&emsp;&emsp;&emsp;&emsp;*(Entrega dia 04/06/2021)*</br>
 
 ## Banco de Dados Utilizado
 * [PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/)
@@ -28,6 +28,7 @@
     </span>  
   </p>
 </details>
+</br>
 
 ## <img  height="45px" align="center" src="https://github.com/marcosbarker/serratec.residencia/blob/main/assets/stockrocketgif.gif"> Tecnologia Utilizada
 - [**DBeaver**](https://dbeaver.io/)    [(*Documentação*)](https://dbeaver.com/docs/wiki/)
