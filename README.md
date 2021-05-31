@@ -16,7 +16,7 @@
 ## Banco de Dados Utilizado
 * [PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/)
 * [Carregar o BD usando PostgresSQL](https://www.postgresqltutorial.com/load-postgresql-sample-database/)
-* [BD DVD Rental (*Local*)](dataBase/)
+* [BD DVD Rental (*Local*)](dataBase/bdDvdRental.sql)
 * [BD DVD Rental (*Link*)](https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
 
 <details>
