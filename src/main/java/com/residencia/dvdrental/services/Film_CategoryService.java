@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.residencia.dvdrental.entities.Actor;
 import com.residencia.dvdrental.entities.Film_Category;
 import com.residencia.dvdrental.repositories.Film_CategoryRepository;
 
