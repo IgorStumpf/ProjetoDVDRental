@@ -75,16 +75,6 @@
         </sub>
       </a><br>
     </td>
-     </td>
-    <td align="center">
-      <a href="https://github.com/hotcortex">
-        <img src="https://unavatar.now.sh/github/hotcortex" width="100px;" alt="Avatar Rob Niemeyer
-"/><br>
-        <sub>
-          <b>Rob Niemeyer</b>
-        </sub>
-      </a><br>
-    </td>
    </table>
    </br>
 
